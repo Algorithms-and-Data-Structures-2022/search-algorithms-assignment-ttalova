@@ -16,7 +16,7 @@
 
 using namespace assignment;
 
-constexpr int kMaxDataSize = 20;
+constexpr int kMaxDataSize = 100;
 
 std::unordered_set<int> all_sums(const std::vector<int>& data) {
 
@@ -36,7 +36,8 @@ std::unordered_set<int> all_sums(const std::vector<int>& data) {
   return res;
 }
 
-TEMPLATE_TEST_CASE("Search", "",BinarySearchIterative) {
+TEMPLATE_TEST_CASE("Search", "", LinearSearchIterative, LinearSearchRecursive, LinearSearchTwoPointers,
+                   BinarySearchIterative, BinarySearchRecursive) {
 
   const int size = GENERATE(range(0, kMaxDataSize));
   auto data = utils::rand_array(size, -100, 100, true);
