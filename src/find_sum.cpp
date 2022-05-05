@@ -6,7 +6,7 @@ namespace assignment {
 
     // Tips: для создания пары (pair) используйте функцию std::make_pair
     int index_left_bord = 0;
-    int index_right_bord = static_cast<int>(data.size()) - 1;
+    int index_right_bord = static_cast<int>(data.size() - 1);
     while (index_left_bord < index_right_bord) {
       if (data[index_left_bord] + data[index_right_bord] < sum) {
         index_left_bord--;

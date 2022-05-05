@@ -33,9 +33,9 @@ namespace assignment {
       return std::nullopt;
     }
     if (search_element < data[(left_index + right_index) / 2]) {
-      recursive_helper(data, search_element, left_index, (left_index + right_index) / 2);
-    } else {
       recursive_helper(data, search_element, (left_index + right_index) / 2, right_index);
+    } else {
+      recursive_helper(data, search_element, left_index, (left_index + right_index) / 2);
     }
   }
 
