@@ -15,7 +15,7 @@ namespace assignment {
     if (search_element == data[curr_index]) {
       return curr_index;
     }
-    if (data[curr_index] < 0) {
+    if (curr_index < 0) {
       return std::nullopt;
     }
     curr_index--;

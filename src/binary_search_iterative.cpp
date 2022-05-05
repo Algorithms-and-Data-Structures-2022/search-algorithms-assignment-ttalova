@@ -19,11 +19,11 @@ namespace assignment {
       if (search_element == data[middle_index]) {
         return middle_index;
       }
-      else if (search_element < data[middle_index]) {
-        index_right_bord = middle_index + 1;
+      if (search_element < data[middle_index]) {
+        index_right_bord = middle_index - 1;
       }
       else if (search_element > data[middle_index]) {
-        index_left_bord = middle_index - 1;
+        index_left_bord = middle_index + 1;
       }
     }
     return std::nullopt;
