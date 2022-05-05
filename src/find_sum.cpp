@@ -9,13 +9,13 @@ namespace assignment {
     int index_right_bord = static_cast<int>(data.size() - 1);
     while (index_left_bord < index_right_bord) {
       if (data[index_left_bord] + data[index_right_bord] < sum) {
-        index_left_bord--;
+        index_left_bord++;
       }
-      if (data[index_left_bord] + data[index_right_bord] == sum) {
+      else if (data[index_left_bord] + data[index_right_bord] == sum) {
         return std::make_pair(index_left_bord, index_right_bord);
       }
       else {
-        index_right_bord++;
+        index_right_bord--;
       }
     }
     return std::nullopt;
