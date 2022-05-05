@@ -32,11 +32,12 @@ namespace assignment {
       }
       return std::nullopt;
     }
-    if (search_element <= data[(left_index + right_index) / 2]) {
-      recursive_helper(data, search_element, (left_index + right_index) / 2, right_index);
+    int middle_index = (left_index + right_index) / 2;
+    if (search_element <= data[middle_index]) {
+      recursive_helper(data, search_element, left_index, middle_index);
     }
-    else if (search_element > data[(left_index + right_index) / 2]){
-      recursive_helper(data, search_element, left_index, (left_index + right_index) / 2);
+    else if (search_element > data[middle_index]){
+      recursive_helper(data, search_element, middle_index, right_index);
     }
   }
 
